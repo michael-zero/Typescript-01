@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "outDir": "dist/js",
+        "target": "ES6",
+        "noEmitOnError": true, //nao gera arquivo js , enquanto o ts n passar pela compilacao
+        "noImplicitAny": true
+    },
+    "include": ["app/**/*"]
+}
