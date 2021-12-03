@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "outDir": "dist/js", //pasta destino
+        "target": "ES6", //alvo é o ecmascript 6
+        "noEmitOnError": true, // ?
+        "noImplicitAny": true, //nao aceita any
+        "removeComments": true, //remove comentarios
+        "strictNullChecks": true //obriga vc a tratar situacoes que pode ser null
+    },
+    "include": ["app/**/*"]
+}
