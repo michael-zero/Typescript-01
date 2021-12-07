@@ -1,7 +1,7 @@
 export function inspect(
         target: any,
         propertyKey: string,
-        descriptor: PropertyDescriptor
+        descriptor: PropertyDescriptor //serve para salvar sobre o metodo origial algumas informacoes
     )
     {
         const metodoOriginal = descriptor.value
