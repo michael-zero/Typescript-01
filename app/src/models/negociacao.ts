@@ -24,13 +24,17 @@ export class Negociacao  implements Imprimivel {
         return data;
     }
 
-  
-
     public paraTexto(): string {
         return`
         Data: ${this.data}
         Valor: ${this.valor}
         Quantidade: ${this.quantidade}
         `
+    }
+
+    public ehIgual(negociacao: Negociacao):boolean{
+        return this.data.getDate() === negociacao.data.getDate()
+        && this.data.getMonth() === negociacao.data.getMonth()
+        && this.data.getFullYear() === negociacao.data.getFullYear()
     }
 }

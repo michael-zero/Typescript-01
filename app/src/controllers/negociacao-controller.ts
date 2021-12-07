@@ -55,6 +55,14 @@ export class NegociacaoController {
         this.negociacaoService
         .obterNegociacoes()
         .then(negociacoesDeHoje => {
+            //filtrando dados que ja existem .. ai nao adiciona
+            return negociacoesDeHoje.filter(negociacoesDeHoje => {
+                return !this.negociacoes //se nao existe, entao adiciona
+                .lista()
+                .some(negociacao => negociacao.ehIgual(negociacoesDeHoje))
+            })
+        })
+        .then(negociacoesDeHoje => {
             for(let negociacao of negociacoesDeHoje){
                 this.negociacoes.adiciona(negociacao)
             }
