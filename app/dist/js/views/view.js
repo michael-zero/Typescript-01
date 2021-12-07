@@ -14,3 +14,4 @@ export class View {
         const t2 = performance.now();
     }
 }
+//# sourceMappingURL=view.js.map
